@@ -1,4 +1,4 @@
-package ru.praktikum.services.qa.scooter;
+package ru.praktikum.services.qa.scooter.tests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import ru.praktikum.services.qa.scooter.BaseTest;
 import ru.praktikum.services.qa.scooter.models.Courier;
 
 import static ru.praktikum.services.qa.scooter.constants.Messages.INSUFFICIENT_DATA_TO_LOG_IN;
@@ -15,7 +16,7 @@ import static ru.praktikum.services.qa.scooter.constants.Uri.QA_SQOOTER_PRACTICU
 import static ru.praktikum.services.qa.scooter.steps.StepsCourier.*;
 import static ru.praktikum.services.qa.scooter.utils.Utils.randomString;
 
-public class CourierLoginWithStepsTest {
+public class CourierLoginWithStepsTest extends BaseTest {
 
     private static final String RANDOM_LOGIN_OF_COURIER = randomString();
     private static final String RANDOM_PASSWORD_OF_COURIER = randomString();
